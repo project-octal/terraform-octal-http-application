@@ -42,6 +42,9 @@ variable "cluster_ingress_class" {
   type        = string
   description = ""
 }
+variable "helm_values" {
+  type = any
+}
 variable "route_rules" {
   type = list(object({
     match_rule : string,
