@@ -11,13 +11,6 @@ module "argocd_application" {
   target_revision    = var.chart_version
   release_name       = var.release_name
   helm_values        = var.helm_values
-  helm_parameters = [
-    {
-      name = "labels"
-      value = yamlencode(local.labels)
-      force_string = false
-    }
-  ]
   labels             = local.labels
 }
 
