@@ -11,6 +11,7 @@ module "argocd_application" {
   target_revision    = var.chart_version
   release_name       = var.release_name
   helm_values        = var.helm_values
+  labels             = local.labels
 }
 
 module "ingress_route" {
@@ -21,5 +22,5 @@ module "ingress_route" {
   cert_issuer = var.cluster_cert_issuer
   dns_name    = var.application_domain_name
   route_rules = var.route_rules
-  labels      = var.labels
+  labels      = local.labels
 }
