@@ -18,6 +18,9 @@ variable "chart_name" {
   type        = string
   description = ""
 }
+variable "chart_version" {
+  type = string
+}
 variable "release_name" {
   type        = string
   description = ""

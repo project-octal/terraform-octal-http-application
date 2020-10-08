@@ -8,6 +8,7 @@ module "argocd_application" {
   namespace          = var.namespace
   repo_url           = var.repo_url
   chart              = var.chart_name
+  target_revision    = var.chart_version
   release_name       = var.release_name
   helm_values = var.helm_values
 
@@ -21,5 +22,6 @@ module "ingress_route" {
   cert_issuer = var.cluster_cert_issuer
   dns_name    = var.application_domain_name
   route_rules = var.route_rules
+
   labels      = var.labels
 }
