@@ -54,7 +54,8 @@ variable "route_rules" {
     services : list(object({
       name : string,
       namespace : string,
-      port : number
+      port : number,
+      scheme : string
     }))
   }))
   default = null
@@ -62,5 +63,5 @@ variable "route_rules" {
 variable "labels" {
   type        = map(string)
   description = ""
-  default = {}
+  default     = {}
 }
