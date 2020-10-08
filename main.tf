@@ -9,7 +9,7 @@ module "argocd_application" {
   repo_url           = var.repo_url
   chart              = var.chart_name
   release_name       = var.release_name
-  labels             = var.labels
+
 }
 
 module "ingress_route" {
