@@ -45,6 +45,16 @@ variable "cluster_ingress_class" {
   type        = string
   description = ""
 }
+variable "automated_prune" {
+  type        = bool
+  description = "Specifies if resources should be pruned during auto-syncing"
+  default     = false
+}
+variable "automated_self_heal" {
+  type        = bool
+  description = "Specifies if partial app sync should be executed when resources are changed only in target Kubernetes cluster and no git change detected"
+  default     = false
+}
 variable "helm_values" {
   type = any
 }
