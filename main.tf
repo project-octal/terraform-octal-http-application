@@ -15,6 +15,7 @@ module "argocd_application" {
     {
       name = "labels"
       value = local.labels
+      force_string = true
     }
   ]
   labels             = local.labels
