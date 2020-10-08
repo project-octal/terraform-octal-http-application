@@ -14,8 +14,8 @@ module "argocd_application" {
   helm_parameters = [
     {
       name = "labels"
-      value = local.labels
-      force_string = true
+      value = yamlencode(local.labels)
+      force_string = false
     }
   ]
   labels             = local.labels
