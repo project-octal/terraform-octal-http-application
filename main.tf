@@ -1,5 +1,5 @@
 module "argocd_application" {
-  source = "github.com/turnbros/terraform-argocd-application"
+  source = "github.com/project-octal/terraform-argocd-application"
 
   argocd_namespace    = var.cluster_argocd_namespace
   destination_server  = var.cluster_endpoint
@@ -17,7 +17,7 @@ module "argocd_application" {
 }
 
 module "ingress_route" {
-  source = "github.com/turnbros/terraform-octal-ingress-route"
+  source = "github.com/project-octal/terraform-octal-ingress-route"
 
   name        = var.name
   namespace   = var.namespace

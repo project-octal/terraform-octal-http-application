@@ -61,9 +61,9 @@ variable "helm_values" {
 variable "route_rules" {
   type = list(object({
     match_rule : string,
-    middlewares: list(object({
-      name: string,
-      namespace: string
+    middlewares : list(object({
+      name : string,
+      namespace : string
     })),
     services : list(object({
       name : string,
